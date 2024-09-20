@@ -47,6 +47,8 @@
     <Compile Include="EstructuraDefensiva.cs" />
     <Compile Include="EstructuraMantenimiento.cs" />
     <Compile Include="EstructuraRecolectora.cs" />
+    <Compile Include="Jugador.cs" />
+    <Compile Include="Enemigo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
