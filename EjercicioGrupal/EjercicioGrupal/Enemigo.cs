@@ -39,5 +39,16 @@ namespace EjercicioGrupal
             return vida <= 0;
         }
 
+        public void AtacarEstructura(EstructuraBase estructura)
+        {
+            estructura.vida -= daño;  
+            Console.WriteLine(nombre + " ataca a " + estructura.nombre);
+
+            if (estructura.vida <= 0)
+            {
+                Console.WriteLine("La estructura " + estructura.nombre + " ha sido destruida.");
+            }
+        }
+
     }
 }
