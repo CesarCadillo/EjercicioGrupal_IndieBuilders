@@ -13,7 +13,7 @@ namespace EjercicioGrupal
         {
             this.daño = daño;
         }
-
+        
         public override void HabilidadDeLaEstructura(int valor)
         {
             valor -= daño;
