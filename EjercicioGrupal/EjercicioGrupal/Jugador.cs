@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
 namespace EjercicioGrupal
 {
     public class Jugador
@@ -27,6 +32,7 @@ namespace EjercicioGrupal
                 Console.WriteLine("No tienes suficiente dinero para comprar la estructura " + estructura.nombre);
             }
         }
+
 
         public void CrearEstructura()
         {
@@ -76,6 +82,28 @@ namespace EjercicioGrupal
             foreach (var estructura in estructuras)
             {
                 estructura.HabilidadDeLaEstructura(dinero);
+
+        public void PerderEstructura(EstructuraBase estructura)
+        {
+            if (estructura.vida <= 0)
+            {
+                estructuras.Remove(estructura);
+                Console.WriteLine("Se ha perdido la estructura " + estructura.nombre);
+            }
+        }
+
+        public void MostrarEstado()
+        {
+            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Dinero: " + dinero);
+        }
+
+        public void MostrarEstructuras()
+        {
+            Console.WriteLine("El jugador " + nombre + " tiene las siguientes estructuras:");
+            foreach (EstructuraBase estructura in estructuras)
+            {
+                Console.WriteLine(estructura.nombre);
             }
         }
     }
