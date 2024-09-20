@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace EjercicioGrupal
 {
-    internal abstract class EstructuraBase
+    public abstract class EstructuraBase
     {
-        private string nombre;
-        private int precio;
-        private int vida;
+        public string nombre;
+        public int precio;
+        public int vida;
 
         protected EstructuraBase(string nombre, int precio, int vida)
         {
