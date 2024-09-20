@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioGrupal
 {
-    internal class Enemigo
+    public  class Enemigo
     {
         string nombre;
         int vida;
