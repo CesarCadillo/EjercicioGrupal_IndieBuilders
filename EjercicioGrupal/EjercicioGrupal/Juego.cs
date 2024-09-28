@@ -56,6 +56,7 @@ namespace EjercicioGrupal
 
             foreach (var enemigo in enemigos)
             {
+                // Se le llama Coalescencia nula, se utiliza para devolver el valor del operando de la izquierda si este no es null o el de la derecha si lo es.
                 EstructuraBase objetivo = jugador.estructuras.Find(e => e is EstructuraDefensiva)
                   ?? jugador.estructuras.Find(e => e is EstructuraMantenimiento)
                   ?? jugador.estructuras.Find(e => e is EstructuraRecolectora);
