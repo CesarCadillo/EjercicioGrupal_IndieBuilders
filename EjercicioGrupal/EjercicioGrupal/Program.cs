@@ -10,7 +10,10 @@ namespace EjercicioGrupal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Jugador jugador = new Jugador("Jugador1", 100);
+            Juego juego = new Juego(jugador);
+
+            juego.Iniciar();
         }
     }
 }
