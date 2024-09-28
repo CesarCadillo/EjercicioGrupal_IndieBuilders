@@ -22,20 +22,57 @@ namespace EjercicioGrupal
         {
             int turnosSobrevividos = 0;
 
-            while (jugador.TieneEstructuras())
+            do
             {
                 turnosSobrevividos++;
                 Console.WriteLine($"\n--- Turno {turnosSobrevividos} ---");
-                MenuDelJugador();
-                TurnoEnemigo();
-            }
 
-            Console.WriteLine($"¡Has sido derrotado después de {turnosSobrevividos} turnos!");
+                MenuDelJugador();
+
+                TurnoEnemigo();
+
+                if (!jugador.TieneEstructuras())
+                {
+                    Console.WriteLine($"Has sobrevivido {turnosSobrevividos} turnos.");
+                    Console.WriteLine("¡Has perdido! Te has quedado sin estructuras.");
+                    break;  
+                }
+
+            } while (true); 
         }
 
         private void MenuDelJugador()
         {
-            
+            Console.WriteLine("\nOpciones:");
+            Console.WriteLine("1. Ver estructuras");
+            Console.WriteLine("2. Crear estructura");
+            Console.WriteLine("3. Ver enemigos");
+            Console.WriteLine("4. Pasar turno");
+
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    jugador.MostrarEstructuras();
+                    break;
+
+                case "2":
+                    jugador.CrearEstructura();
+                    break;
+
+                case "3":
+                    MostrarEnemigos();
+                    break;
+
+                case "4":
+                    jugador.PasarTurno();
+                    break;
+
+                default:
+                    Console.WriteLine("Opción no válida.");
+                    break;
+            }
         }
 
         private void MostrarEnemigos()
