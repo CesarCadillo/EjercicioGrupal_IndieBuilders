@@ -5,9 +5,9 @@ namespace EjercicioGrupal
 {
     public class Jugador
     {
-        private string nombre;
-        private int dinero;
-        private List<EstructuraBase> estructuras = new List<EstructuraBase>();
+        public string nombre;
+        public int dinero;
+        public List<EstructuraBase> estructuras = new List<EstructuraBase>();
 
         public Jugador(string nombre, int dinero)
         {
@@ -95,6 +95,11 @@ namespace EjercicioGrupal
             Console.WriteLine("Dinero: " + dinero);
         }
 
-        
+        public bool TieneEstructuras()
+        {
+            return estructuras.Count > 0;
+        }
+
+
     }
 }
