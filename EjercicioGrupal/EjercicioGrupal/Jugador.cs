@@ -20,6 +20,7 @@ namespace EjercicioGrupal
             if (dinero >= estructura.precio)
             {
                 dinero -= estructura.precio;
+                estructuras.Add(estructura);
                 Console.WriteLine("Se ha comprado la estructura " + estructura.nombre);
             }
             else

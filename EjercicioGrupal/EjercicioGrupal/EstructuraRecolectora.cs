@@ -1,9 +1,9 @@
 ﻿
 namespace EjercicioGrupal
 {
-    internal class EstructuraRecolectora : EstructuraBase
+    public class EstructuraRecolectora : EstructuraBase
     {
-        private int dineroQueRecolecta;
+        public int dineroQueRecolecta;
         
         public EstructuraRecolectora(string nombre, int precio, int vida, int dineroQueRecolecta) : base(nombre, precio, vida)
         {

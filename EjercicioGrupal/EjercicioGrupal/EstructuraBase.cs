@@ -16,5 +16,10 @@ namespace EjercicioGrupal
 
         public abstract void HabilidadDeLaEstructura(int valor);
 
+        public bool EstaViva()
+        {
+            return vida > 0;
+        }
+
     }
 }
