@@ -4,8 +4,8 @@ namespace EjercicioGrupal
 {
     public  class Enemigo
     {
-        string nombre;
-        int vida;
+        public string nombre;
+        public int vida;
         int daño;
 
         public Enemigo(string nombre, int vida, int daño)
@@ -47,6 +47,10 @@ namespace EjercicioGrupal
             }
         }
 
+        public bool EstaVivo()
+        {
+            return vida > 0;
+        }
 
     }
 }
